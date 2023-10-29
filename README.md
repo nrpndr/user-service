@@ -3,7 +3,7 @@ User Service is a microservice for managing user registration, authentication an
 
 ## Getting Started
 It a spring boot project with Maven.
-Clone the github Repo and import in IDE of your choice.
+Clone the github Repo and import in IDE of your choice. \
 **Notes:**
 - If you have the zipped project, just unzip it and import in any IDE
 
@@ -12,6 +12,7 @@ Clone the github Repo and import in IDE of your choice.
 * [Maven](https://maven.apache.org/)
 * [Spring boot 3.1.5](https://spring.io/projects/spring-boot)
 * [Spring security](https://spring.io/projects/spring-security)
+* [Redis](https://redis.io)
 
 ### Prerequisites
 - Java 17
