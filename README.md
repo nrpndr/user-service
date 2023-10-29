@@ -43,13 +43,13 @@ Using a browser it's possible to interact with the REST apis exposed by this ser
 
 http://localhost:8080/userservice/swagger-ui.html
 
-![Swagger](https://github.com/nrpndr/user-service/swagger-ui.png "Swagger interface")
+![Swagger](https://github.com/nrpndr/user-service/blob/main/swagger-ui.png "Swagger interface")
 
 Another alternative is to use Postman (https://www.postman.com/).
 
 This project contains also the Postman export file with all the configured test calls:
 
-![Postman](https://github.com/nrpndr/user-service/postman-ui.png "Postman Collection")
+![Postman](https://github.com/nrpndr/user-service/blob/main/postman-ui.png "Postman Collection")
 
 ### Running the project
 - To run the program, execute below commands in terminal at root level
