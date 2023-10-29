@@ -13,6 +13,7 @@ Clone the github Repo and import in IDE of your choice. \
 * [Spring boot 3.1.5](https://spring.io/projects/spring-boot)
 * [Spring security](https://spring.io/projects/spring-security)
 * [Redis](https://redis.io)
+* [Swagger](https://swagger.io/)
 
 ### Prerequisites
 - Java 17
@@ -23,6 +24,32 @@ Clone the github Repo and import in IDE of your choice. \
   You can use [opendjdk 17](https://download.java.net/openjdk/jdk17/ri/openjdk-17+35_windows-x64_bin.zip) and configure your PATH to use this version
 - Install Maven \
   Visit [this link](https://maven.apache.org/install.html) in order to install maven in your local.
+  
+#### Exposed REST apis
+Here below are the exposed REST Apis:
+
+* Register a new user 
+* Login with username & password
+* Create a new user
+* Retrieve a single user with id
+* Retrieve the list of all the existing users
+* Update user data with id
+* Delete a user with id
+* Validate accessToken API to get validated UserDetails
+* Standard validation for email, password
+
+## REST apis details
+Using a browser it's possible to interact with the REST apis exposed by this service with Swagger:
+
+http://localhost:8080/userservice/swagger-ui.html
+
+![Swagger](https://github.com/nrpndr/user-service/swagger-ui.png "Swagger interface")
+
+Another alternative is to use Postman (https://www.postman.com/).
+
+This project contains also the Postman export file with all the configured test calls:
+
+![Postman](https://github.com/nrpndr/user-service/postman-ui.png "Postman Collection")
 
 ### Running the project
 - To run the program, execute below commands in terminal at root level
@@ -38,3 +65,6 @@ Clone the github Repo and import in IDE of your choice. \
 - [spring.io](https://spring.io/)
 - [Docker](https://docs.docker.com/)
 - [Kubernetes](https://kubernetes.io/)
+- [Redis](https://redis.io/)
+- [Springdoc](https://springdoc.org/)
+- [Swagger](https://swagger.io/)
