@@ -47,7 +47,7 @@ http://localhost:8080/userservice/swagger-ui.html
 
 Another alternative is to use Postman (https://www.postman.com/).
 
-This project contains also the Postman export file with all the configured test calls:
+This project contains also the [Postman export file](https://github.com/nrpndr/user-service/blob/main/UserService.postman_collection.json) with all the configured test calls:
 
 ![Postman](https://github.com/nrpndr/user-service/blob/main/postman-ui.png "Postman Collection")
 
