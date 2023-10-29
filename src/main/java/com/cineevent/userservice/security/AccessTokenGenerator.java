@@ -7,6 +7,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.cineevent.userservice.cache.UserCache;
 import com.cineevent.userservice.dto.response.UserAuthResponseDTO;
 import com.cineevent.userservice.dto.response.UserResponseDTO;
 import com.cineevent.userservice.exceptions.AccessTokenExpiredException;
@@ -33,6 +34,9 @@ public class AccessTokenGenerator {
 	@Autowired
 	private UserService userService;
 	
+	@Autowired
+	private UserCache userCache;
+	
 	public String generateToken(UserResponseDTO user) {
 		String jwtToken = "";
 		Map<String, Object> claimsMap = new HashMap<>();
@@ -51,7 +55,7 @@ public class AccessTokenGenerator {
 			String userRoleInToken = (String) claims.get("userRole");
 			String userNameInToken = (String) claims.get("sub");
 			
-			userService.getUserById(userIdInToken);
+			userCache.getUser(userIdInToken);
 			
 			UserAuthResponseDTO authResponseDTO = new UserAuthResponseDTO();
 			authResponseDTO.setUserId(userIdInToken);

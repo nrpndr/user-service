@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.cineevent.userservice.cache.UserCache;
 import com.cineevent.userservice.dto.request.UserRequestDTO;
 import com.cineevent.userservice.dto.response.UserResponseDTO;
 import com.cineevent.userservice.services.UserService;
@@ -25,6 +26,9 @@ public class UserController {
 
 	@Autowired
 	private UserService userService;
+	
+	@Autowired
+	private UserCache userCache;
 
 	/**
 	 * Endpoint for creating a user
@@ -58,7 +62,7 @@ public class UserController {
 	@GetMapping("/{userId}")
 	@PreAuthorize("hasAuthority('ADMIN') || #userId == principal.userId")
 	public UserResponseDTO getUserById(@PathVariable("userId") int userId) {
-		return userService.getUserById(userId);
+		return userCache.getUser(userId);
 	}
 
 	/**
