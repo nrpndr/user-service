@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration name="Userservice" status="INFO" monitorInterval="3600">
+	<Properties>
+		<Property name="rootLogLevel" value="INFO"/>
+		<Property name="logFileName" value="Userservice" />
+		<Property name="Log_Path" value="/usr/local/log/userService"/>
+		<Property name="Log_Pattern" value="%d{MM-dd-yy HH:mm:ss,SSS} %-5p [%c{1}:%L] (%t):  : %m%ex%n" />
+	</Properties>
+	<Appenders>
+		<Console name="ConsoleLog" target="SYSTEM_OUT">
+			<PatternLayout pattern="${Log_Pattern}" />
+		</Console>
+		<RollingFile name="Userservice_Log" fileName="${Log_Path}/${logFileName}.log"
+			filePattern="${Log_Path}/${logFileName}.log.%d{yyyy-MM-dd}" ignoreExceptions="false">
+			<PatternLayout pattern="${Log_Pattern}" />
+			<TimeBasedTriggeringPolicy />
+		</RollingFile>
+	</Appenders>
+
+	<Loggers>		
+		<Root level="${rootLogLevel}">
+			<AppenderRef ref="Userservice_Log" />
+			<AppenderRef ref="ConsoleLog" />
+		</Root>
+	</Loggers>
+</Configuration>
