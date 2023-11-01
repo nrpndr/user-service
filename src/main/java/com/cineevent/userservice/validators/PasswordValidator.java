@@ -11,7 +11,7 @@ import com.cineevent.userservice.exceptions.InValidUserInputException;
 @Component
 public class PasswordValidator {
 
-    private static final int MAXIMUM_PASSWORD_LENGTH = 20;
+    public static final int MAXIMUM_PASSWORD_LENGTH = 20;
 
     private static final String USER_PASSWORD_REGEX = "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$";
 
