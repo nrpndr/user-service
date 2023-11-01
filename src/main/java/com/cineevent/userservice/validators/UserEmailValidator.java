@@ -11,7 +11,7 @@ import com.cineevent.userservice.exceptions.InValidUserInputException;
 @Component
 public class UserEmailValidator {
 
-    private static final int MAXIMUM_EMAIL_LENGTH = 100;
+    public static final int MAXIMUM_EMAIL_LENGTH = 100;
 
     private static final String USER_EMAIL_REGEX = "^[\\w!#$%&'*+/=?`{|}~^-]+(?:\\.[\\w!#$%&'*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$";
 
