@@ -71,7 +71,7 @@ public class UserService{
 			String msg = String.format("The username %s is already in use from another user with ID = %s",
 					userByUsername.getUserName(), userByUsername.getId());
 			log.error(msg);
-			throw new InValidUserInputException(String.format("This username %s is already in use.",
+			throw new InValidUserInputException(String.format("This username %s is already in use",
 					username));
 		}
 	}
@@ -94,7 +94,7 @@ public class UserService{
         	String msg = String.format("The email %s is already in use from another user with ID = %s",
                     userByEmail.getEmail(), userByEmail.getId());
 			log.error(msg);
-			throw new InValidUserInputException(String.format("This email %s is already in use.",
+			throw new InValidUserInputException(String.format("This email %s is already in use",
 					email));
         }
     }
@@ -118,11 +118,17 @@ public class UserService{
 
     @Transactional
 	public UserResponseDTO updateUser(int id, UserRequestDTO userRequestDTO) {
-		if (userRequestDTO == null) {
+    	User userFromDB = userRepository.findById(id).orElse(null);
+		
+		if(userFromDB == null) {
+			throw constructUserDoesNotExistException("id", String.valueOf(id));
+		}
+    	
+    	if (userRequestDTO == null) {
             throw new InValidUserInputException("User data cannot be null");
         }
 		
-		if(Strings.isNotBlank(userRequestDTO.getUserName())) {
+		if(Strings.isNotBlank(userRequestDTO.getUserName()) && !userRequestDTO.getUserName().equals(userFromDB.getUserName())) {
 			checkIfUsernameNotUsed(userRequestDTO.getUserName());
 		}
 		
@@ -130,17 +136,11 @@ public class UserService{
 			passwordValidator.checkPassword(userRequestDTO.getPassword());
 		}
 		
-		if(Strings.isNotBlank(userRequestDTO.getEmail())) {
+		if(Strings.isNotBlank(userRequestDTO.getEmail()) && !userRequestDTO.getEmail().equals(userFromDB.getEmail())) {
 			 userEmailValidator.checkEmail(userRequestDTO.getEmail());
 			 checkIfEmailNotUsed(userRequestDTO.getEmail());
 		}
 	    
-		User userFromDB = userRepository.findById(id).orElse(null);
-		
-		if(userFromDB == null) {
-			throw constructUserDoesNotExistException("id", String.valueOf(id));
-		}
-		
 		UserDTOTransformer.updateUserFromDB(userFromDB, userRequestDTO);
 		userRepository.save(userFromDB);
 		return UserDTOTransformer.transformToUserResponseDTO(userFromDB);

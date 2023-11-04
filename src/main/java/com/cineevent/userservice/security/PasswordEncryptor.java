@@ -21,6 +21,10 @@ public final class PasswordEncryptor {
 
 	public static String getEncryptedPassword(String password){
 		try {
+			byte[] hash = getSHA(password);
+			if(hash == null) {
+				return null;
+			}
 			return toHexString(getSHA(password));
 		} catch (NoSuchAlgorithmException e) {
 			log.error("Error Encrypting password",e);
@@ -36,6 +40,9 @@ public final class PasswordEncryptor {
 		 * digest() method called to calculate message digest of an input and return
 		 * array of byte
 		 */
+		if(input == null) {
+			return null;
+		}
 		return md.digest(input.getBytes(StandardCharsets.UTF_8));
 	}
 

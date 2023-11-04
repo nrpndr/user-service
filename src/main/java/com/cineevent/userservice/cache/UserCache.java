@@ -77,7 +77,7 @@ public class UserCache {
 		return userResponseDTO;
 	}
 	
-	public UserResponseDTO getUserFromCache(int userId) {
+	private UserResponseDTO getUserFromCache(int userId) {
 		log.info("getUserFromCache for userId {}", userId);
 		Jedis jedis = jedisPool.getResource();
 		String userInCache = jedis.get(getUserKey(userId));
