@@ -14,6 +14,7 @@ import org.springframework.util.CollectionUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import com.cineevent.userservice.dto.response.UserAuthResponseDTO;
+import com.cineevent.userservice.exceptions.InValidAccessTokenException;
 import com.cineevent.userservice.security.ThreadLocalAuthStore;
 
 import jakarta.servlet.FilterChain;
@@ -33,6 +34,9 @@ public class AuthorizationFilter extends OncePerRequestFilter {
 
 		UserAuthResponseDTO authResponseDTO = ThreadLocalAuthStore.getAuthDetails();
 		log.info("authResponseDTO="+authResponseDTO);
+		if(authResponseDTO == null) {
+			throw new InValidAccessTokenException("Authorization header value is not correct");
+		}
 		final List<String> grantedAuthorities = new ArrayList<>();
 		grantedAuthorities.add(authResponseDTO.getUserRole());
 

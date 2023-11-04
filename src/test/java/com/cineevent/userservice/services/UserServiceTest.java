@@ -1,34 +1,23 @@
 package com.cineevent.userservice.services;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import java.util.List;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.jdbc.Sql;
+
 import com.cineevent.userservice.dto.request.UserRequestDTO;
 import com.cineevent.userservice.dto.response.UserResponseDTO;
 import com.cineevent.userservice.entities.User;
 import com.cineevent.userservice.exceptions.InValidUserInputException;
 import com.cineevent.userservice.exceptions.InValidUserLoginInputException;
 import com.cineevent.userservice.exceptions.UserDoesNotExistException;
-import com.cineevent.userservice.repositories.UserRepository;
-import com.cineevent.userservice.role.UserRole;
-import com.cineevent.userservice.security.PasswordEncryptor;
-import com.cineevent.userservice.validators.PasswordValidator;
-import com.cineevent.userservice.validators.UserEmailValidator;
-import com.cineevent.userservice.transformer.UserDTOTransformer;
-
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.jdbc.Sql;
-import org.springframework.transaction.annotation.Transactional;
-
-import static org.mockito.Mockito.*;
-
-import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 @Sql({"classpath:test_schema.sql"})
