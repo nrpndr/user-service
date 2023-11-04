@@ -13,7 +13,6 @@ import com.cineevent.userservice.dto.response.UserResponseDTO;
 import com.cineevent.userservice.exceptions.AccessTokenExpiredException;
 import com.cineevent.userservice.exceptions.InValidAccessTokenException;
 import com.cineevent.userservice.exceptions.UserDoesNotExistException;
-import com.cineevent.userservice.services.UserService;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
@@ -30,9 +29,6 @@ public class AccessTokenGenerator {
 	
 	private static final String SECRET_FOR_TOKEN = "USER_SERVICE_SECRET_NRPNDR";
 	private static final long TOKEN_VALID_DURATION_IN_MILLI_SEC = 60*60000l;
-	
-	@Autowired
-	private UserService userService;
 	
 	@Autowired
 	private UserCache userCache;
@@ -74,27 +70,4 @@ public class AccessTokenGenerator {
 			throw new InValidAccessTokenException("InValid  access token");
 		}
 	}
-	
-	public static void main(String[] args) {
-		UserResponseDTO responseDTO = new UserResponseDTO();
-		responseDTO.setUserName("nrpndr");
-		responseDTO.setId(1);
-		responseDTO.setUserRole("USER");
-//		AccessTokenGenerator accessTokenGenerator = new AccessTokenGenerator();
-//		String accessToken = accessTokenGenerator.generateToken(responseDTO);
-//		System.out.println(accessToken);
-//		System.out.println(accessTokenGenerator.validateToken(accessToken));
-		
-
-		      ThreadLocal<Integer> tlocal = new ThreadLocal<Integer>();  
-
-		      tlocal.set(100);
-		      // returns the current thread's value
-		      System.out.println("value = " + tlocal.get());
-		 
-//		      tlocal.set(90);
-		      // returns the current thread's value of 
-		      System.out.println("value = " + tlocal.get());
-	}
-
 }
