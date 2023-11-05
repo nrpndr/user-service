@@ -4,5 +4,6 @@
 .settings
 .factorypath
 .idea
+*.log
 target/
 bin/
