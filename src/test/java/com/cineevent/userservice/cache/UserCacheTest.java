@@ -14,7 +14,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.FilterType;
 
 import com.cineevent.userservice.configuration.RabbitMQConfig;
-import com.cineevent.userservice.controller.MessageController;
 import com.cineevent.userservice.dto.response.UserResponseDTO;
 import com.cineevent.userservice.messaging.MQMessageConsumer;
 import com.cineevent.userservice.services.UserService;
@@ -24,8 +23,8 @@ import redis.clients.jedis.JedisPool;
 
 @SpringBootTest
 @ComponentScan(basePackages = { "com.cineevent.userservice" }, excludeFilters = {
-		@ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = { RabbitMQConfig.class,
-				MessageController.class, MQMessageConsumer.class }) })
+		@ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = { RabbitMQConfig.class, 
+				MQMessageConsumer.class }) })
 public class UserCacheTest {
 
     @InjectMocks

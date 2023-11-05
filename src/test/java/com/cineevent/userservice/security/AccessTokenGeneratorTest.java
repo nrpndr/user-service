@@ -18,7 +18,6 @@ import org.springframework.context.annotation.FilterType;
 
 import com.cineevent.userservice.cache.UserCache;
 import com.cineevent.userservice.configuration.RabbitMQConfig;
-import com.cineevent.userservice.controller.MessageController;
 import com.cineevent.userservice.dto.response.UserAuthResponseDTO;
 import com.cineevent.userservice.dto.response.UserResponseDTO;
 import com.cineevent.userservice.exceptions.AccessTokenExpiredException;
@@ -29,7 +28,7 @@ import com.cineevent.userservice.messaging.MQMessageConsumer;
 @SpringBootTest
 @ComponentScan(basePackages = { "com.cineevent.userservice" }, excludeFilters = {
 		@ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = { RabbitMQConfig.class,
-				MessageController.class, MQMessageConsumer.class }) })
+				MQMessageConsumer.class }) })
 @ExtendWith(MockitoExtension.class)
 public class AccessTokenGeneratorTest {
 
