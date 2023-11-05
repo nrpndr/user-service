@@ -16,9 +16,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cineevent.userservice.cache.UserCache;
+import com.cineevent.userservice.dto.request.UserMQMessage;
 import com.cineevent.userservice.dto.request.UserRequestDTO;
 import com.cineevent.userservice.dto.response.UserResponseDTO;
+import com.cineevent.userservice.services.RabbitMQProducer;
 import com.cineevent.userservice.services.UserService;
+import com.google.gson.Gson;
 
 @RestController
 @RequestMapping(value = "/users")
@@ -29,6 +32,9 @@ public class UserController {
 	
 	@Autowired
 	private UserCache userCache;
+	
+	@Autowired
+	private RabbitMQProducer rabbitMQProducer;
 
 	/**
 	 * Endpoint for creating a user
@@ -88,6 +94,8 @@ public class UserController {
 	@PreAuthorize("hasAuthority('ADMIN')")
 	public ResponseEntity<?> deleteById(@PathVariable("userId") int id) {
 		userService.deleteUserById(id);
+		UserMQMessage userMQMessage = new UserMQMessage("DELETE", id);
+		rabbitMQProducer.sendMessage(new Gson().toJson(userMQMessage));
 		return ResponseEntity.noContent().build();
 	}
 

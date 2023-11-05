@@ -10,16 +10,24 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.FilterType;
 import org.springframework.test.context.jdbc.Sql;
 
+import com.cineevent.userservice.configuration.RabbitMQConfig;
+import com.cineevent.userservice.controller.MessageController;
 import com.cineevent.userservice.dto.request.UserRequestDTO;
 import com.cineevent.userservice.dto.response.UserResponseDTO;
 import com.cineevent.userservice.entities.User;
 import com.cineevent.userservice.exceptions.InValidUserInputException;
 import com.cineevent.userservice.exceptions.InValidUserLoginInputException;
 import com.cineevent.userservice.exceptions.UserDoesNotExistException;
+import com.cineevent.userservice.messaging.MQMessageConsumer;
 
 @SpringBootTest
+@ComponentScan(basePackages = { "com.cineevent.userservice" }, excludeFilters = {
+		@ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = { RabbitMQConfig.class,
+				MessageController.class, MQMessageConsumer.class }) })
 @Sql({"classpath:test_schema.sql"})
 public class UserServiceTest {
 

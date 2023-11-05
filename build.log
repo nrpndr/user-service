@@ -1,0 +1,409 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.cineevent:user-service >---------------------
+[INFO] Building user-service 1
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.2.0:clean (default-clean) @ user-service ---
+[INFO] Deleting D:\Repos\GithubPersonal\user-service\target
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:resources (default-resources) @ user-service ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 3 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.11.0:compile (default-compile) @ user-service ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 41 source files with javac [debug release 17] to target\classes
+[WARNING] /D:/Repos/GithubPersonal/user-service/src/main/java/com/cineevent/userservice/configuration/SecurityConfig.java:[24,21] httpBasic() in org.springframework.security.config.annotation.web.builders.HttpSecurity has been deprecated and marked for removal
+[WARNING] /D:/Repos/GithubPersonal/user-service/src/main/java/com/cineevent/userservice/configuration/SecurityConfig.java:[25,21] formLogin() in org.springframework.security.config.annotation.web.builders.HttpSecurity has been deprecated and marked for removal
+[WARNING] /D:/Repos/GithubPersonal/user-service/src/main/java/com/cineevent/userservice/configuration/SecurityConfig.java:[26,21] csrf() in org.springframework.security.config.annotation.web.builders.HttpSecurity has been deprecated and marked for removal
+[WARNING] /D:/Repos/GithubPersonal/user-service/src/main/java/com/cineevent/userservice/configuration/SecurityConfig.java:[27,21] cors() in org.springframework.security.config.annotation.web.builders.HttpSecurity has been deprecated and marked for removal
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:testResources (default-testResources) @ user-service ---
+[INFO] Copying 3 resources from src\test\resources to target\test-classes
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.11.0:testCompile (default-testCompile) @ user-service ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 12 source files with javac [debug release 17] to target\test-classes
+[INFO] /D:/Repos/GithubPersonal/user-service/src/test/java/com/cineevent/userservice/filters/AuthorizationFilterTest.java: D:\Repos\GithubPersonal\user-service\src\test\java\com\cineevent\userservice\filters\AuthorizationFilterTest.java uses unchecked or unsafe operations.
+[INFO] /D:/Repos/GithubPersonal/user-service/src/test/java/com/cineevent/userservice/filters/AuthorizationFilterTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0:test (default-test) @ user-service ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.cineevent.userservice.cache.UserCacheTest
+11-05-23 11:22:16,197 INFO  [AnnotationConfigContextLoaderUtils:83] (main):  : Could not detect default configuration classes for test class [com.cineevent.userservice.cache.UserCacheTest]: UserCacheTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11-05-23 11:22:16,434 INFO  [SpringBootTestContextBootstrapper:248] (main):  : Found @SpringBootConfiguration com.cineevent.userservice.UserServiceApplication for test class com.cineevent.userservice.cache.UserCacheTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.5)
+
+11-05-23 11:22:17,285 WARN  [DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer:78] (main):  : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/MavenLocalRepo/org/json/json/20220320/json-20220320.jar!/org/json/JSONObject.class
+	jar:file:/D:/MavenLocalRepo/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+11-05-23 11:22:17,326 INFO  [UserCacheTest:51] (main):  : Starting UserCacheTest using Java 17.0.2 with PID 7220 (started by NripendraThakur in D:\Repos\GithubPersonal\user-service)
+11-05-23 11:22:17,336 INFO  [UserCacheTest:638] (main):  : No active profile set, falling back to 1 default profile: "default"
+11-05-23 11:22:19,413 INFO  [RepositoryConfigurationDelegate:291] (main):  : Multiple Spring Data modules found, entering strict repository configuration mode
+11-05-23 11:22:19,417 INFO  [RepositoryConfigurationDelegate:138] (main):  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+11-05-23 11:22:19,731 INFO  [RepositoryConfigurationDelegate:208] (main):  : Finished Spring Data repository scanning in 285 ms. Found 1 JPA repository interfaces.
+11-05-23 11:22:19,764 INFO  [RepositoryConfigurationDelegate:291] (main):  : Multiple Spring Data modules found, entering strict repository configuration mode
+11-05-23 11:22:19,769 INFO  [RepositoryConfigurationDelegate:138] (main):  : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+11-05-23 11:22:19,821 INFO  [RepositoryConfigurationExtensionSupport:320] (main):  : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.cineevent.userservice.repositories.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+11-05-23 11:22:19,822 INFO  [RepositoryConfigurationDelegate:208] (main):  : Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
+11-05-23 11:22:21,583 INFO  [LogHelper:31] (main):  : HHH000204: Processing PersistenceUnitInfo [name: default]
+11-05-23 11:22:21,850 INFO  [Version:44] (main):  : HHH000412: Hibernate ORM core version 6.2.13.Final
+11-05-23 11:22:21,859 INFO  [Environment:191] (main):  : HHH000406: Using bytecode reflection optimizer
+11-05-23 11:22:22,952 INFO  [SpringPersistenceUnitInfo:87] (main):  : No LoadTimeWeaver setup: ignoring JPA class transformer
+11-05-23 11:22:25,253 INFO  [JtaPlatformInitiator:55] (main):  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+11-05-23 11:22:25,259 INFO  [LocalContainerEntityManagerFactoryBean:437] (main):  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+11-05-23 11:22:26,387 INFO  [UserCache:49] (main):  : initializing with redisEndpoint=localhost, redisPort=6379, redisMaxConnection=100
+11-05-23 11:22:27,535 WARN  [JpaBaseConfiguration$JpaWebConfiguration:231] (main):  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+11-05-23 11:22:27,601 WARN  [UserDetailsServiceAutoConfiguration:87] (main):  : 
+
+Using generated security password: 9bc8ceb4-698a-4899-94c2-bede8c7995c2
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+11-05-23 11:22:27,996 INFO  [DefaultSecurityFilterChain:54] (main):  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4290fcd7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5a503cf0, org.springframework.security.web.context.SecurityContextHolderFilter@2f726cf4, org.springframework.security.web.header.HeaderWriterFilter@4a66949a, org.springframework.security.web.authentication.logout.LogoutFilter@5add0cc0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4700db93, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6aa7d7a0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@14c1cba6, org.springframework.security.web.access.ExceptionTranslationFilter@12d24c43, org.springframework.security.web.access.intercept.AuthorizationFilter@611f28f5]
+11-05-23 11:22:30,674 INFO  [CachingConnectionFactory:630] (main):  : Attempting to connect to: [localhost:5672]
+11-05-23 11:22:30,697 INFO  [SimpleMessageListenerContainer:1860] (main):  : Broker not available; cannot force queue declarations during start: java.net.ConnectException: Connection refused: no further information
+11-05-23 11:22:30,709 INFO  [CachingConnectionFactory:630] (main):  : Attempting to connect to: [localhost:5672]
+11-05-23 11:22:30,712 INFO  [SimpleMessageListenerContainer:1860] (main):  : Broker not available; cannot force queue declarations during start: java.net.ConnectException: Connection refused: no further information
+11-05-23 11:22:30,720 INFO  [CachingConnectionFactory:630] (org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1):  : Attempting to connect to: [localhost:5672]
+11-05-23 11:22:30,725 ERROR [SimpleMessageListenerContainer:1913] (org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1):  : Failed to check/redeclare auto-delete queue(s). org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:61)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:594)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:711)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:257)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2225)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2198)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2178)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueInfo(RabbitAdmin.java:465)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:449)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1937)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1905)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1381)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1223)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:61)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1234)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1184)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:632)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:607)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:557)
+	... 12 more
+
+11-05-23 11:22:30,730 INFO  [CachingConnectionFactory:630] (org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1):  : Attempting to connect to: [localhost:5672]
+11-05-23 11:22:30,751 INFO  [UserCacheTest:57] (main):  : Started UserCacheTest in 13.968 seconds (process running for 18.156)
+11-05-23 11:22:35,484 INFO  [UserCache:63] (main):  : setUserInCache for userId 3
+11-05-23 11:22:35,668 INFO  [UserCache:81] (main):  : getUserFromCache for userId 1
+11-05-23 11:22:35,670 INFO  [UserCache:85] (main):  : user found in cache for userId 1
+11-05-23 11:22:35,674 INFO  [UserCache:63] (main):  : setUserInCache for userId 1
+11-05-23 11:22:35,730 INFO  [UserCache:81] (main):  : getUserFromCache for userId 4
+11-05-23 11:22:35,731 INFO  [UserCache:73] (main):  : getUser from db for userId 4
+11-05-23 11:22:35,733 INFO  [UserCache:63] (main):  : setUserInCache for userId 4
+11-05-23 11:22:35,758 WARN  [SimpleMessageListenerContainer:1484] (org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1):  : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.21 s - in com.cineevent.userservice.cache.UserCacheTest
+[INFO] Running com.cineevent.userservice.exceptions.GenericExceptionHandlerTest
+11-05-23 11:22:35,785 INFO  [SimpleMessageListenerContainer:1463] (org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1):  : Restarting Consumer@329b4814: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 s - in com.cineevent.userservice.exceptions.GenericExceptionHandlerTest
+[INFO] Running com.cineevent.userservice.filters.AuthenticationFilterTest
+11-05-23 11:22:35,881 INFO  [CachingConnectionFactory:630] (org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2):  : Attempting to connect to: [localhost:5672]
+11-05-23 11:22:35,883 ERROR [SimpleMessageListenerContainer:1916] (org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2):  : Failed to check/redeclare auto-delete queue(s).
+11-05-23 11:22:35,884 INFO  [CachingConnectionFactory:630] (org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2):  : Attempting to connect to: [localhost:5672]
+11-05-23 11:22:36,263 INFO  [AuthenticationFilter:36] (main):  : In Authentication Filter and Request is:: /users
+11-05-23 11:22:36,276 INFO  [AuthenticationFilter:36] (main):  : In Authentication Filter and Request is:: /users
+11-05-23 11:22:36,286 INFO  [AuthenticationFilter:36] (main):  : In Authentication Filter and Request is:: /users
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.501 s - in com.cineevent.userservice.filters.AuthenticationFilterTest
+[INFO] Running com.cineevent.userservice.filters.AuthorizationFilterTest
+11-05-23 11:22:36,300 INFO  [AuthorizationFilter:33] (main):  : In AuthorizationFilter and Request is:: null
+11-05-23 11:22:36,301 INFO  [AuthorizationFilter:36] (main):  : authResponseDTO=null
+11-05-23 11:22:36,310 INFO  [AuthorizationFilter:33] (main):  : In AuthorizationFilter and Request is:: null
+11-05-23 11:22:36,345 INFO  [AuthorizationFilter:36] (main):  : authResponseDTO=UserAuthResponseDTO(userId=1, userName=testUser, userRole=ROLE_USER)
+11-05-23 11:22:36,350 INFO  [AuthorizationFilter:56] (main):  : authResponseDTO2=UserAuthResponseDTO(userId=1, userName=testUser, userRole=ROLE_USER)
+11-05-23 11:22:36,351 INFO  [AuthorizationFilter:57] (main):  : authResponseDTO2=UserAuthResponseDTO(userId=1, userName=testUser, userRole=ROLE_USER)
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.06 s - in com.cineevent.userservice.filters.AuthorizationFilterTest
+[INFO] Running com.cineevent.userservice.security.AccessTokenGeneratorTest
+11-05-23 11:22:36,376 INFO  [AnnotationConfigContextLoaderUtils:83] (main):  : Could not detect default configuration classes for test class [com.cineevent.userservice.security.AccessTokenGeneratorTest]: AccessTokenGeneratorTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11-05-23 11:22:36,446 INFO  [SpringBootTestContextBootstrapper:248] (main):  : Found @SpringBootConfiguration com.cineevent.userservice.UserServiceApplication for test class com.cineevent.userservice.security.AccessTokenGeneratorTest
+11-05-23 11:22:36,814 ERROR [AccessTokenGenerator:66] (main):  : Accesstoken expired io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:235)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at com.cineevent.userservice.security.AccessTokenGenerator.validateToken(AccessTokenGenerator.java:49)
+	at com.cineevent.userservice.security.AccessTokenGeneratorTest.lambda$testValidateTokenWithInvalidToken$1(AccessTokenGeneratorTest.java:82)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3083)
+	at com.cineevent.userservice.security.AccessTokenGeneratorTest.testValidateTokenWithInvalidToken(AccessTokenGeneratorTest.java:82)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:50)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+
+11-05-23 11:22:36,832 ERROR [AccessTokenGenerator:63] (main):  : Accesstoken expired, error message JWT expired at 2023-10-29T16:38:25Z. Current time: 2023-11-05T11:22:36Z, a difference of 585851832 milliseconds.  Allowed clock skew: 0 milliseconds.
+11-05-23 11:22:36,852 ERROR [AccessTokenGenerator:69] (main):  : User  does not exist com.cineevent.userservice.exceptions.UserDoesNotExistException: User does not exist
+	at com.cineevent.userservice.cache.UserCache.getUser(UserCache.java:71)
+	at com.cineevent.userservice.security.AccessTokenGenerator.validateToken(AccessTokenGenerator.java:54)
+	at com.cineevent.userservice.security.AccessTokenGeneratorTest.lambda$testValidateTokenWithUserNotInCache$2(AccessTokenGeneratorTest.java:93)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3083)
+	at com.cineevent.userservice.security.AccessTokenGeneratorTest.testValidateTokenWithUserNotInCache(AccessTokenGeneratorTest.java:93)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:50)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.488 s - in com.cineevent.userservice.security.AccessTokenGeneratorTest
+[INFO] Running com.cineevent.userservice.security.PasswordEncryptorTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s - in com.cineevent.userservice.security.PasswordEncryptorTest
+[INFO] Running com.cineevent.userservice.security.ThreadLocalAuthStoreTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.109 s - in com.cineevent.userservice.security.ThreadLocalAuthStoreTest
+[INFO] Running com.cineevent.userservice.services.UserServiceTest
+11-05-23 11:22:37,003 INFO  [AnnotationConfigContextLoaderUtils:83] (main):  : Could not detect default configuration classes for test class [com.cineevent.userservice.services.UserServiceTest]: UserServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11-05-23 11:22:37,026 INFO  [SpringBootTestContextBootstrapper:248] (main):  : Found @SpringBootConfiguration com.cineevent.userservice.UserServiceApplication for test class com.cineevent.userservice.services.UserServiceTest
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.email=?
+Hibernate: insert into users (email,firstname,lastname,password,username,userrole,id) values (?,?,?,?,?,?,default)
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.username=?
+11-05-23 11:22:37,698 INFO  [UserService:192] (main):  : Login request with username testuser10
+11-05-23 11:22:37,699 INFO  [UserService:196] (main):  : Valid login for user testuser10 at time 1699163557699
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.email=?
+Hibernate: insert into users (email,firstname,lastname,password,username,userrole,id) values (?,?,?,?,?,?,default)
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.username=?
+11-05-23 11:22:37,760 ERROR [UserService:73] (main):  : The username testuser2 is already in use from another user with ID = 2
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0
+11-05-23 11:22:37,777 INFO  [UserService:169] (main):  : No of users from db are 2
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.email=?
+Hibernate: insert into users (email,firstname,lastname,password,username,userrole,id) values (?,?,?,?,?,?,default)
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.username=?
+Hibernate: update users set email=?,firstname=?,lastname=?,password=?,username=?,userrole=? where id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.email=?
+Hibernate: update users set email=?,firstname=?,lastname=?,password=?,username=?,userrole=? where id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.email=?
+Hibernate: insert into users (email,firstname,lastname,password,username,userrole,id) values (?,?,?,?,?,?,default)
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.email=?
+11-05-23 11:22:37,869 ERROR [UserService:96] (main):  : The email testuser3@example.com is already in use from another user with ID = 4
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.email=?
+Hibernate: insert into users (email,firstname,lastname,password,username,userrole,id) values (?,?,?,?,?,?,default)
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.email=?
+Hibernate: insert into users (email,firstname,lastname,password,username,userrole,id) values (?,?,?,?,?,?,default)
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.username=?
+11-05-23 11:22:37,944 WARN  [UserService:188] (main):  : InValid login attempt with username testuser12invalid, no such user exist
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.email=?
+Hibernate: insert into users (email,firstname,lastname,password,username,userrole,id) values (?,?,?,?,?,?,default)
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.email=?
+Hibernate: insert into users (email,firstname,lastname,password,username,userrole,id) values (?,?,?,?,?,?,default)
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.email=?
+Hibernate: insert into users (email,firstname,lastname,password,username,userrole,id) values (?,?,?,?,?,?,default)
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.email=?
+Hibernate: insert into users (email,firstname,lastname,password,username,userrole,id) values (?,?,?,?,?,?,default)
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.username=?
+11-05-23 11:22:38,086 INFO  [UserService:192] (main):  : Login request with username testuser11
+11-05-23 11:22:38,087 WARN  [UserService:198] (main):  : InValid login attempt with username testuser11, wrong password attempt
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.email=?
+Hibernate: insert into users (email,firstname,lastname,password,username,userrole,id) values (?,?,?,?,?,?,default)
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.id=?
+11-05-23 11:22:38,124 INFO  [UserService:158] (main):  : User with id 11 has been deleted.
+Hibernate: delete from users where id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.username,u1_0.userrole from users u1_0 where u1_0.email=?
+[INFO] Tests run: 23, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.152 s - in com.cineevent.userservice.services.UserServiceTest
+[INFO] Running com.cineevent.userservice.transformer.UserDTOTransformerTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.cineevent.userservice.transformer.UserDTOTransformerTest
+[INFO] Running com.cineevent.userservice.UserServiceApplicationTests
+11-05-23 11:22:38,167 INFO  [AnnotationConfigContextLoaderUtils:83] (main):  : Could not detect default configuration classes for test class [com.cineevent.userservice.UserServiceApplicationTests]: UserServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11-05-23 11:22:38,179 INFO  [SpringBootTestContextBootstrapper:248] (main):  : Found @SpringBootConfiguration com.cineevent.userservice.UserServiceApplication for test class com.cineevent.userservice.UserServiceApplicationTests
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.03 s - in com.cineevent.userservice.UserServiceApplicationTests
+[INFO] Running com.cineevent.userservice.validators.PasswordValidatorTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s - in com.cineevent.userservice.validators.PasswordValidatorTest
+[INFO] Running com.cineevent.userservice.validators.UserEmailValidatorTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in com.cineevent.userservice.validators.UserEmailValidatorTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 60, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  41.069 s
+[INFO] Finished at: 2023-11-05T11:22:38+05:30
+[INFO] ------------------------------------------------------------------------

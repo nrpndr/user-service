@@ -13,15 +13,23 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.FilterType;
 
 import com.cineevent.userservice.cache.UserCache;
+import com.cineevent.userservice.configuration.RabbitMQConfig;
+import com.cineevent.userservice.controller.MessageController;
 import com.cineevent.userservice.dto.response.UserAuthResponseDTO;
 import com.cineevent.userservice.dto.response.UserResponseDTO;
 import com.cineevent.userservice.exceptions.AccessTokenExpiredException;
 import com.cineevent.userservice.exceptions.InValidAccessTokenException;
 import com.cineevent.userservice.exceptions.UserDoesNotExistException;
+import com.cineevent.userservice.messaging.MQMessageConsumer;
 
 @SpringBootTest
+@ComponentScan(basePackages = { "com.cineevent.userservice" }, excludeFilters = {
+		@ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = { RabbitMQConfig.class,
+				MessageController.class, MQMessageConsumer.class }) })
 @ExtendWith(MockitoExtension.class)
 public class AccessTokenGeneratorTest {
 
