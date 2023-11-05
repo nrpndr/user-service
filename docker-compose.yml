@@ -1,0 +1,63 @@
+version: '3.8'
+services:
+  user-service:
+    container_name: user-service-server
+    image: user-service:1.0
+    build: .
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+      user-service-mysqldb:
+        condition: service_started
+      user-service-redis:
+        condition: service_started
+      user-service-rabbitmq:
+        condition: service_started
+    networks:
+      - user-service-net
+      
+  user-service-mysqldb:
+    container_name: user-service-mysqldb
+    image: mysql:8.0.35
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: db_user
+      MYSQL_USER: nrpndr
+      MYSQL_PASSWORD: 1234
+    ports:
+      - 3307:3306
+    networks:
+      - user-service-net
+
+  user-service-redis:
+    container_name: user-service-redis
+    image: redis
+    ports:
+      - 6379:6379
+    networks:
+      - user-service-net
+
+  user-service-rabbitmq:
+    container_name: user-service-rabbitmq
+    image: "rabbitmq:management"
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+      - RABBITMQ_DEFAULT_VHOST=/
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - ./rabbitmq/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf:ro
+      - ./rabbitmq/rabbitmq-definitions.json:/etc/rabbitmq/definitions.json:ro
+    command: ["rabbitmq-server"]
+    networks:
+      - user-service-net
+
+volumes:
+  rabbitmq-data:
+  
+networks:
+  user-service-net:

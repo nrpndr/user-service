@@ -1,0 +1,111 @@
+{
+"queues": [
+    {
+        "name": "user_delete_queue",
+        "vhost": "/",
+        "durable": true,
+        "auto_delete": false,
+        "arguments": {
+            "x-queue-type": "classic"
+        }
+    },
+	{
+        "name": "movie_delete_queue",
+        "vhost": "/",
+        "durable": true,
+        "auto_delete": false,
+        "arguments": {
+            "x-queue-type": "classic"
+        }
+    },
+	{
+        "name": "event_delete_queue",
+        "vhost": "/",
+        "durable": true,
+        "auto_delete": false,
+        "arguments": {
+            "x-queue-type": "classic"
+        }
+    }
+],
+"exchanges": [
+    {
+        "name": "user_delete_queue_exchange",
+        "vhost": "/",
+        "type": "topic",
+        "durable": true,
+        "auto_delete": false,
+        "internal": false,
+        "arguments": {}
+    },
+	{
+        "name": "movie_delete_queue_exchange",
+        "vhost": "/",
+        "type": "topic",
+        "durable": true,
+        "auto_delete": false,
+        "internal": false,
+        "arguments": {}
+    },
+	{
+        "name": "event_delete_queue_exchange",
+        "vhost": "/",
+        "type": "topic",
+        "durable": true,
+        "auto_delete": false,
+        "internal": false,
+        "arguments": {}
+    }
+],
+"bindings": [
+    {
+        "source": "user_delete_queue_exchange",
+        "vhost": "/",
+        "destination": "user_delete_queue",
+        "destination_type": "queue",
+        "routing_key": "user_delete_queue",
+        "arguments": {}
+    },
+	{
+        "source": "movie_delete_queue_exchange",
+        "vhost": "/",
+        "destination": "movie_delete_queue",
+        "destination_type": "queue",
+        "routing_key": "movie_delete_queue",
+        "arguments": {}
+    },
+	{
+        "source": "event_delete_queue_exchange",
+        "vhost": "/",
+        "destination": "event_delete_queue",
+        "destination_type": "queue",
+        "routing_key": "event_delete_queue",
+        "arguments": {}
+    }
+],
+"users": [
+    {
+      "name": "guest",
+      "password_hash": "BMfxN8drrYcIqXZMr+pWTpDT0nMcOagMduLX0bjr4jwud/pN",
+      "hashing_algorithm": "rabbit_password_hashing_sha256",
+      "tags": [
+        "administrator"
+      ],
+      "limits": {}
+    }
+],
+"vhosts": [
+    {
+      "name": "/"
+    }
+],
+"permissions": [
+    {
+      "user": "guest",
+      "vhost": "/",
+      "configure": ".*",
+      "write": ".*",
+      "read": ".*"
+    }
+]
+}

@@ -21,12 +21,10 @@ import com.cineevent.userservice.entities.User;
 import com.cineevent.userservice.exceptions.InValidUserInputException;
 import com.cineevent.userservice.exceptions.InValidUserLoginInputException;
 import com.cineevent.userservice.exceptions.UserDoesNotExistException;
-import com.cineevent.userservice.messaging.MQMessageConsumer;
 
 @SpringBootTest
 @ComponentScan(basePackages = { "com.cineevent.userservice" }, excludeFilters = {
-		@ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = { RabbitMQConfig.class,
-				MQMessageConsumer.class }) })
+		@ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = { RabbitMQConfig.class}) })
 @Sql({"classpath:test_schema.sql"})
 public class UserServiceTest {
 
