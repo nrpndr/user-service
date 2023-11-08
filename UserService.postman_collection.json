@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "f4609703-c01e-4ea3-b5ca-71683809e907",
+		"_postman_id": "22168d1e-1b2b-463d-9531-bfdebca5a716",
 		"name": "UserService",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "3998349"
@@ -134,7 +134,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+							"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 						},
 						{
 							"name": "Unauthorized",
@@ -180,7 +180,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+							"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 						},
 						{
 							"name": "Forbidden",
@@ -226,7 +226,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+							"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 						},
 						{
 							"name": "Not Found",
@@ -272,7 +272,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+							"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 						},
 						{
 							"name": "Internal Server Error",
@@ -318,7 +318,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+							"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 						}
 					]
 				}
@@ -333,6 +333,16 @@
 						{
 							"name": "get User By Id",
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
 								"method": "GET",
 								"header": [
 									{
@@ -367,6 +377,11 @@
 											{
 												"key": "Accept",
 												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
 											}
 										],
 										"url": {
@@ -405,6 +420,11 @@
 											{
 												"key": "Accept",
 												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
 											}
 										],
 										"url": {
@@ -433,7 +453,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+									"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 								},
 								{
 									"name": "Unauthorized",
@@ -443,6 +463,11 @@
 											{
 												"key": "Accept",
 												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
 											}
 										],
 										"url": {
@@ -471,7 +496,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+									"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 								},
 								{
 									"name": "Forbidden",
@@ -481,6 +506,11 @@
 											{
 												"key": "Accept",
 												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
 											}
 										],
 										"url": {
@@ -509,7 +539,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+									"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 								},
 								{
 									"name": "Not Found",
@@ -519,6 +549,11 @@
 											{
 												"key": "Accept",
 												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
 											}
 										],
 										"url": {
@@ -547,7 +582,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+									"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 								},
 								{
 									"name": "Internal Server Error",
@@ -557,6 +592,11 @@
 											{
 												"key": "Accept",
 												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
 											}
 										],
 										"url": {
@@ -585,13 +625,23 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+									"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 								}
 							]
 						},
 						{
 							"name": "delete By Id",
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
 								"method": "DELETE",
 								"header": [
 									{
@@ -626,6 +676,11 @@
 											{
 												"key": "Accept",
 												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
 											}
 										],
 										"url": {
@@ -664,6 +719,11 @@
 											{
 												"key": "Accept",
 												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
 											}
 										],
 										"url": {
@@ -692,7 +752,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+									"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 								},
 								{
 									"name": "Unauthorized",
@@ -702,6 +762,11 @@
 											{
 												"key": "Accept",
 												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
 											}
 										],
 										"url": {
@@ -730,7 +795,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+									"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 								},
 								{
 									"name": "Forbidden",
@@ -740,6 +805,11 @@
 											{
 												"key": "Accept",
 												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
 											}
 										],
 										"url": {
@@ -768,7 +838,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+									"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 								},
 								{
 									"name": "Not Found",
@@ -778,6 +848,11 @@
 											{
 												"key": "Accept",
 												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
 											}
 										],
 										"url": {
@@ -806,7 +881,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+									"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 								},
 								{
 									"name": "Internal Server Error",
@@ -816,6 +891,11 @@
 											{
 												"key": "Accept",
 												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
 											}
 										],
 										"url": {
@@ -844,13 +924,23 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+									"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 								}
 							]
 						},
 						{
 							"name": "update User",
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
 								"method": "PATCH",
 								"header": [
 									{
@@ -903,6 +993,11 @@
 											{
 												"key": "Accept",
 												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
 											}
 										],
 										"body": {
@@ -955,6 +1050,11 @@
 											{
 												"key": "Accept",
 												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
 											}
 										],
 										"body": {
@@ -993,7 +1093,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+									"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 								},
 								{
 									"name": "Unauthorized",
@@ -1007,6 +1107,11 @@
 											{
 												"key": "Accept",
 												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
 											}
 										],
 										"body": {
@@ -1045,7 +1150,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+									"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 								},
 								{
 									"name": "Forbidden",
@@ -1059,6 +1164,11 @@
 											{
 												"key": "Accept",
 												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
 											}
 										],
 										"body": {
@@ -1097,7 +1207,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+									"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 								},
 								{
 									"name": "Not Found",
@@ -1111,6 +1221,11 @@
 											{
 												"key": "Accept",
 												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
 											}
 										],
 										"body": {
@@ -1149,7 +1264,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+									"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 								},
 								{
 									"name": "Internal Server Error",
@@ -1163,6 +1278,11 @@
 											{
 												"key": "Accept",
 												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
 											}
 										],
 										"body": {
@@ -1201,7 +1321,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+									"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 								}
 							]
 						}
@@ -1210,6 +1330,16 @@
 				{
 					"name": "get All Users",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearerToken}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -1236,6 +1366,11 @@
 									{
 										"key": "Accept",
 										"value": "*/*"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
 									}
 								],
 								"url": {
@@ -1268,6 +1403,11 @@
 									{
 										"key": "Accept",
 										"value": "*/*"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
 									}
 								],
 								"url": {
@@ -1290,7 +1430,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+							"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 						},
 						{
 							"name": "Unauthorized",
@@ -1300,6 +1440,11 @@
 									{
 										"key": "Accept",
 										"value": "*/*"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
 									}
 								],
 								"url": {
@@ -1322,7 +1467,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+							"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 						},
 						{
 							"name": "Forbidden",
@@ -1332,6 +1477,11 @@
 									{
 										"key": "Accept",
 										"value": "*/*"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
 									}
 								],
 								"url": {
@@ -1354,7 +1504,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+							"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 						},
 						{
 							"name": "Not Found",
@@ -1364,6 +1514,11 @@
 									{
 										"key": "Accept",
 										"value": "*/*"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
 									}
 								],
 								"url": {
@@ -1386,7 +1541,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+							"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 						},
 						{
 							"name": "Internal Server Error",
@@ -1396,6 +1551,11 @@
 									{
 										"key": "Accept",
 										"value": "*/*"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
 									}
 								],
 								"url": {
@@ -1418,13 +1578,23 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+							"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 						}
 					]
 				},
 				{
 					"name": "create User",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearerToken}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -1469,6 +1639,11 @@
 									{
 										"key": "Accept",
 										"value": "*/*"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
 									}
 								],
 								"body": {
@@ -1515,6 +1690,11 @@
 									{
 										"key": "Accept",
 										"value": "*/*"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
 									}
 								],
 								"body": {
@@ -1547,7 +1727,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+							"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 						},
 						{
 							"name": "Unauthorized",
@@ -1561,6 +1741,11 @@
 									{
 										"key": "Accept",
 										"value": "*/*"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
 									}
 								],
 								"body": {
@@ -1593,7 +1778,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+							"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 						},
 						{
 							"name": "Forbidden",
@@ -1607,6 +1792,11 @@
 									{
 										"key": "Accept",
 										"value": "*/*"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
 									}
 								],
 								"body": {
@@ -1639,7 +1829,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+							"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 						},
 						{
 							"name": "Not Found",
@@ -1653,6 +1843,11 @@
 									{
 										"key": "Accept",
 										"value": "*/*"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
 									}
 								],
 								"body": {
@@ -1685,7 +1880,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+							"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 						},
 						{
 							"name": "Internal Server Error",
@@ -1699,6 +1894,11 @@
 									{
 										"key": "Accept",
 										"value": "*/*"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
 									}
 								],
 								"body": {
@@ -1731,39 +1931,9 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+							"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 						}
 					]
-				}
-			],
-			"auth": {
-				"type": "bearer",
-				"bearer": [
-					{
-						"key": "token",
-						"value": "<accessToken>",
-						"type": "string"
-					}
-				]
-			},
-			"event": [
-				{
-					"listen": "prerequest",
-					"script": {
-						"type": "text/javascript",
-						"exec": [
-							""
-						]
-					}
-				},
-				{
-					"listen": "test",
-					"script": {
-						"type": "text/javascript",
-						"exec": [
-							""
-						]
-					}
 				}
 			]
 		},
@@ -1895,7 +2065,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+							"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 						},
 						{
 							"name": "Unauthorized",
@@ -1941,7 +2111,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+							"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 						},
 						{
 							"name": "Forbidden",
@@ -1987,7 +2157,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+							"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 						},
 						{
 							"name": "Not Found",
@@ -2033,7 +2203,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+							"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 						},
 						{
 							"name": "Internal Server Error",
@@ -2079,7 +2249,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+							"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 						}
 					]
 				}
@@ -2213,7 +2383,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+							"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 						},
 						{
 							"name": "Unauthorized",
@@ -2259,7 +2429,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+							"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 						},
 						{
 							"name": "Forbidden",
@@ -2305,7 +2475,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+							"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 						},
 						{
 							"name": "Not Found",
@@ -2351,7 +2521,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+							"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 						},
 						{
 							"name": "Internal Server Error",
@@ -2397,7 +2567,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n  \"message\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+							"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
 						}
 					]
 				}

@@ -23,6 +23,9 @@ import com.cineevent.userservice.services.RabbitMQProducer;
 import com.cineevent.userservice.services.UserService;
 import com.google.gson.Gson;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+
 @RestController
 @RequestMapping(value = "/users")
 public class UserController {
@@ -44,6 +47,7 @@ public class UserController {
 	 */
 	@PostMapping
 	@PreAuthorize("hasAuthority('ADMIN')")
+	@Operation(security = { @SecurityRequirement (name = "bearer-key") })
 	public ResponseEntity<UserResponseDTO> createUser(@RequestBody UserRequestDTO userRequestDTO) {
 		return new ResponseEntity<>(userService.createUser(userRequestDTO), null, HttpStatus.CREATED);
 	}
@@ -55,6 +59,7 @@ public class UserController {
 	 */
 	@GetMapping
 	@PreAuthorize("hasAuthority('ADMIN')")
+	@Operation(security = { @SecurityRequirement (name = "bearer-key") })
 	public List<UserResponseDTO> getAllUsers() {
 		return userService.getAllUsers();
 	}
@@ -67,6 +72,7 @@ public class UserController {
 	 */
 	@GetMapping("/{userId}")
 	@PreAuthorize("hasAuthority('ADMIN') || #userId == principal.userId")
+	@Operation(security = { @SecurityRequirement (name = "bearer-key") })
 	public UserResponseDTO getUserById(@PathVariable("userId") int userId) {
 		return userCache.getUser(userId);
 	}
@@ -80,6 +86,7 @@ public class UserController {
 	 */
 	@PatchMapping("/{userId}")
 	@PreAuthorize("hasAuthority('ADMIN') || #userId == principal.userId")
+	@Operation(security = { @SecurityRequirement (name = "bearer-key") })
 	public UserResponseDTO updateUser(@PathVariable("userId") int userId, @RequestBody UserRequestDTO userRequestDTO) {
 		return userService.updateUser(userId, userRequestDTO);
 	}
@@ -92,6 +99,7 @@ public class UserController {
 	 */
 	@DeleteMapping("/{userId}")
 	@PreAuthorize("hasAuthority('ADMIN')")
+	@Operation(security = { @SecurityRequirement (name = "bearer-key") })
 	public ResponseEntity<?> deleteById(@PathVariable("userId") int id) {
 		userService.deleteUserById(id);
 		UserMQMessage userMQMessage = new UserMQMessage("DELETE", id);

@@ -9,11 +9,11 @@ import lombok.ToString;
 @ToString
 public class ErrorResponseDTO {
 
-	private final String message;
+	private final String errorMessage;
 	private final long timestamp;
 
-	public ErrorResponseDTO(final String message) {
+	public ErrorResponseDTO(final String errorMessage) {
 		this.timestamp = System.currentTimeMillis();
-		this.message = message;
+		this.errorMessage = errorMessage;
 	}
 }

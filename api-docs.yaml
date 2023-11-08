@@ -36,14 +36,14 @@ paths:
             '*/*':
               schema:
                 $ref: '#/components/schemas/ErrorResponseDTO'
-        "404":
-          description: Not Found
+        "400":
+          description: Bad Request
           content:
             '*/*':
               schema:
                 $ref: '#/components/schemas/ErrorResponseDTO'
-        "400":
-          description: Bad Request
+        "404":
+          description: Not Found
           content:
             '*/*':
               schema:
@@ -78,14 +78,14 @@ paths:
             '*/*':
               schema:
                 $ref: '#/components/schemas/ErrorResponseDTO'
-        "404":
-          description: Not Found
+        "400":
+          description: Bad Request
           content:
             '*/*':
               schema:
                 $ref: '#/components/schemas/ErrorResponseDTO'
-        "400":
-          description: Bad Request
+        "404":
+          description: Not Found
           content:
             '*/*':
               schema:
@@ -98,6 +98,8 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/UserResponseDTO'
+      security:
+      - bearer-key: []
     post:
       tags:
       - user-controller
@@ -127,14 +129,14 @@ paths:
             '*/*':
               schema:
                 $ref: '#/components/schemas/ErrorResponseDTO'
-        "404":
-          description: Not Found
+        "400":
+          description: Bad Request
           content:
             '*/*':
               schema:
                 $ref: '#/components/schemas/ErrorResponseDTO'
-        "400":
-          description: Bad Request
+        "404":
+          description: Not Found
           content:
             '*/*':
               schema:
@@ -145,6 +147,8 @@ paths:
             '*/*':
               schema:
                 $ref: '#/components/schemas/UserResponseDTO'
+      security:
+      - bearer-key: []
   /register:
     post:
       tags:
@@ -175,14 +179,14 @@ paths:
             '*/*':
               schema:
                 $ref: '#/components/schemas/ErrorResponseDTO'
-        "404":
-          description: Not Found
+        "400":
+          description: Bad Request
           content:
             '*/*':
               schema:
                 $ref: '#/components/schemas/ErrorResponseDTO'
-        "400":
-          description: Bad Request
+        "404":
+          description: Not Found
           content:
             '*/*':
               schema:
@@ -223,14 +227,14 @@ paths:
             '*/*':
               schema:
                 $ref: '#/components/schemas/ErrorResponseDTO'
-        "404":
-          description: Not Found
+        "400":
+          description: Bad Request
           content:
             '*/*':
               schema:
                 $ref: '#/components/schemas/ErrorResponseDTO'
-        "400":
-          description: Bad Request
+        "404":
+          description: Not Found
           content:
             '*/*':
               schema:
@@ -272,14 +276,14 @@ paths:
             '*/*':
               schema:
                 $ref: '#/components/schemas/ErrorResponseDTO'
-        "404":
-          description: Not Found
+        "400":
+          description: Bad Request
           content:
             '*/*':
               schema:
                 $ref: '#/components/schemas/ErrorResponseDTO'
-        "400":
-          description: Bad Request
+        "404":
+          description: Not Found
           content:
             '*/*':
               schema:
@@ -290,6 +294,8 @@ paths:
             '*/*':
               schema:
                 $ref: '#/components/schemas/UserResponseDTO'
+      security:
+      - bearer-key: []
     delete:
       tags:
       - user-controller
@@ -320,14 +326,14 @@ paths:
             '*/*':
               schema:
                 $ref: '#/components/schemas/ErrorResponseDTO'
-        "404":
-          description: Not Found
+        "400":
+          description: Bad Request
           content:
             '*/*':
               schema:
                 $ref: '#/components/schemas/ErrorResponseDTO'
-        "400":
-          description: Bad Request
+        "404":
+          description: Not Found
           content:
             '*/*':
               schema:
@@ -338,6 +344,8 @@ paths:
             '*/*':
               schema:
                 type: object
+      security:
+      - bearer-key: []
     patch:
       tags:
       - user-controller
@@ -374,14 +382,14 @@ paths:
             '*/*':
               schema:
                 $ref: '#/components/schemas/ErrorResponseDTO'
-        "404":
-          description: Not Found
+        "400":
+          description: Bad Request
           content:
             '*/*':
               schema:
                 $ref: '#/components/schemas/ErrorResponseDTO'
-        "400":
-          description: Bad Request
+        "404":
+          description: Not Found
           content:
             '*/*':
               schema:
@@ -392,12 +400,14 @@ paths:
             '*/*':
               schema:
                 $ref: '#/components/schemas/UserResponseDTO'
+      security:
+      - bearer-key: []
 components:
   schemas:
     ErrorResponseDTO:
       type: object
       properties:
-        message:
+        errorMessage:
           type: string
         timestamp:
           type: integer
@@ -462,3 +472,8 @@ components:
           type: string
         message:
           type: string
+  securitySchemes:
+    bearer-key:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
