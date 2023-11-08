@@ -14,7 +14,7 @@ Clone the github Repo and import in IDE of your choice. \
 * [Spring security](https://spring.io/projects/spring-security)
 * [Redis](https://redis.io)
 * [Swagger](https://swagger.io/)
-* [Docker] (https://docs.docker.com/)
+* [Docker](https://docs.docker.com/)
 * [RabbitMQ](https://www.rabbitmq.com/)
 
 ### Prerequisites
@@ -28,7 +28,7 @@ Clone the github Repo and import in IDE of your choice. \
 - Install Maven \
   Visit [this link](https://maven.apache.org/install.html) in order to install maven in your local.
 - Install Docker Desktop \
-  Visit [this link] (https://docs.docker.com/desktop/install/mac-install/). If you are a windows desktop user refer [this](https://docs.docker.com/desktop/install/windows-install/)
+  Visit [this link](https://docs.docker.com/desktop/install/mac-install/). If you are a windows desktop user refer [this](https://docs.docker.com/desktop/install/windows-install/)
   
 #### Exposed REST apis
 Here below are the exposed REST Apis:
