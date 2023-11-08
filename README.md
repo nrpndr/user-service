@@ -14,16 +14,21 @@ Clone the github Repo and import in IDE of your choice. \
 * [Spring security](https://spring.io/projects/spring-security)
 * [Redis](https://redis.io)
 * [Swagger](https://swagger.io/)
+* [Docker] (https://docs.docker.com/)
+* [RabbitMQ](https://www.rabbitmq.com/)
 
 ### Prerequisites
 - Java 17
 - Maven 3.6.3
+- Docker Desktop 24.X.X (If you plan to deploy and test in local)
 
 ### Installing
 - Install java 17 \
   You can use [opendjdk 17](https://download.java.net/openjdk/jdk17/ri/openjdk-17+35_windows-x64_bin.zip) and configure your PATH to use this version
 - Install Maven \
   Visit [this link](https://maven.apache.org/install.html) in order to install maven in your local.
+- Install Docker Desktop \
+  Visit [this link] (https://docs.docker.com/desktop/install/mac-install/). If you are a windows desktop user refer [this](https://docs.docker.com/desktop/install/windows-install/)
   
 #### Exposed REST apis
 Here below are the exposed REST Apis:
@@ -53,10 +58,19 @@ This project contains also the [Postman export file](https://github.com/nrpndr/u
 
 ### Running the project
 - To run the program, execute below commands in terminal at root level
+    
     ```
     mvn clean install
     java -jar target/user-service.jar
     ```
+- Prerequisite to the above is that you need a have a local installation of mysqldb, redis server and rabbitMQ.
+- If you want to avoid all that hassle, simply do the following(You need to have docker desktop installed for this)
+	
+    ```
+    mvn clean install
+    docker compose up
+    ```
+
 
 ## Acknowledgments
 - [Baeldung](https://www.baeldung.com)
@@ -68,3 +82,4 @@ This project contains also the [Postman export file](https://github.com/nrpndr/u
 - [Redis](https://redis.io/)
 - [Springdoc](https://springdoc.org/)
 - [Swagger](https://swagger.io/)
+- [RabbitMQ](https://www.rabbitmq.com/)
