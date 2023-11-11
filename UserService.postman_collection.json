@@ -2577,7 +2577,7 @@
 	"variable": [
 		{
 			"key": "baseUrl",
-			"value": "http://localhost:8080/userservice"
+			"value": "http://localhost:9011/userservice"
 		}
 	]
 }
