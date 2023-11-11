@@ -3,7 +3,7 @@ info:
   title: UserService
   version: v0
 servers:
-- url: http://localhost:9011/userservice
+- url: http://localhost:9011
   description: Generated server url
 paths:
   /validateToken:
