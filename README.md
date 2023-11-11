@@ -46,7 +46,7 @@ Here below are the exposed REST Apis:
 ## REST apis details
 Using a browser it's possible to interact with the REST apis exposed by this service with Swagger:
 
-http://localhost:8080/userservice/swagger-ui.html
+http://localhost:9011/userservice/swagger-ui.html
 
 ![Swagger](https://github.com/nrpndr/user-service/blob/main/swagger-ui.png "Swagger interface")
 
