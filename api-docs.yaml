@@ -4,7 +4,7 @@ info:
   version: v0
 servers:
 - url: http://localhost:9011
-  description: Generated server url
+  description: User Service is a microservice for managing user registration, authentication and user profile management
 paths:
   /validateToken:
     post:
