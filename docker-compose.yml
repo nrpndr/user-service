@@ -6,7 +6,7 @@ services:
     build: .
     restart: always
     ports:
-      - 9080:8080
+      - 9011:9011
     depends_on:
       user-service-mysqldb:
         condition: service_started
