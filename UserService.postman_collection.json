@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "22168d1e-1b2b-463d-9531-bfdebca5a716",
-		"name": "UserService",
+		"_postman_id": "61ff590d-0df1-4256-a6bb-1bc98833e4cc",
+		"name": "User Service",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "3998349"
 	},
@@ -954,7 +954,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"userRole\": \"<string>\"\n}",
+									"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -1002,7 +1002,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"userRole\": \"<string>\"\n}",
+											"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\"\n}",
 											"options": {
 												"raw": {
 													"headerFamily": "json",
@@ -1059,7 +1059,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"userRole\": \"<string>\"\n}",
+											"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\"\n}",
 											"options": {
 												"raw": {
 													"headerFamily": "json",
@@ -1116,7 +1116,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"userRole\": \"<string>\"\n}",
+											"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\"\n}",
 											"options": {
 												"raw": {
 													"headerFamily": "json",
@@ -1173,7 +1173,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"userRole\": \"<string>\"\n}",
+											"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\"\n}",
 											"options": {
 												"raw": {
 													"headerFamily": "json",
@@ -1230,7 +1230,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"userRole\": \"<string>\"\n}",
+											"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\"\n}",
 											"options": {
 												"raw": {
 													"headerFamily": "json",
@@ -1287,7 +1287,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"userRole\": \"<string>\"\n}",
+											"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\"\n}",
 											"options": {
 												"raw": {
 													"headerFamily": "json",
@@ -1608,7 +1608,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"userRole\": \"<string>\"\n}",
+							"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\"\n}",
 							"options": {
 								"raw": {
 									"headerFamily": "json",
@@ -1648,7 +1648,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"userRole\": \"<string>\"\n}",
+									"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -1699,7 +1699,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"userRole\": \"<string>\"\n}",
+									"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -1750,7 +1750,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"userRole\": \"<string>\"\n}",
+									"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -1801,7 +1801,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"userRole\": \"<string>\"\n}",
+									"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -1852,7 +1852,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"userRole\": \"<string>\"\n}",
+									"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -1903,7 +1903,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"userRole\": \"<string>\"\n}",
+									"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -1956,7 +1956,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"userRole\": \"<string>\"\n}",
+							"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\"\n}",
 							"options": {
 								"raw": {
 									"headerFamily": "json",
@@ -1991,7 +1991,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"userRole\": \"<string>\"\n}",
+									"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -2037,7 +2037,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"userRole\": \"<string>\"\n}",
+									"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -2083,7 +2083,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"userRole\": \"<string>\"\n}",
+									"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -2129,7 +2129,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"userRole\": \"<string>\"\n}",
+									"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -2175,7 +2175,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"userRole\": \"<string>\"\n}",
+									"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -2221,7 +2221,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"userRole\": \"<string>\"\n}",
+									"raw": "{\n  \"userName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"email\": \"<string>\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",

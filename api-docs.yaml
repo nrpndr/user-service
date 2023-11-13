@@ -1,10 +1,10 @@
 openapi: 3.0.1
 info:
-  title: UserService
-  version: v0
+  title: User Service
+  version: v1
 servers:
 - url: http://localhost:9011
-  description: User Service is a microservice for managing user registration, authentication and user profile management
+  description: User Service is a microservice for managing user registration, authentication and user profile management.
 paths:
   /validateToken:
     post:
@@ -439,8 +439,6 @@ components:
         lastName:
           type: string
         email:
-          type: string
-        userRole:
           type: string
     UserResponseDTO:
       type: object

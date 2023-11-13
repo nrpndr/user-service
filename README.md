@@ -16,6 +16,7 @@ Clone the github Repo and import in IDE of your choice. \
 * [Swagger](https://swagger.io/)
 * [Docker](https://docs.docker.com/)
 * [RabbitMQ](https://www.rabbitmq.com/)
+* [Mysql](https://www.mysql.com/)
 
 ### Prerequisites
 - Java 17
@@ -46,7 +47,7 @@ Here below are the exposed REST Apis:
 ## REST apis details
 Using a browser it's possible to interact with the REST apis exposed by this service with Swagger:
 
-http://localhost:9011/userservice/swagger-ui.html
+http://localhost:9011/swagger-ui.html
 
 ![Swagger](https://github.com/nrpndr/user-service/blob/main/swagger-ui.png "Swagger interface")
 
