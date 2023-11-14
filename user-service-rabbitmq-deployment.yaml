@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: user-service-rabbitmq
+  name: user-service-rabbitmq
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: user-service-rabbitmq
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: user-service-rabbitmq
+    spec:
+      containers:
+        - image: rabbitmq:management
+          name: user-service-rabbitmq
+          env:
+            - name: RABBITMQ_DEFAULT_PASS
+              value: guest
+            - name: RABBITMQ_DEFAULT_USER
+              value: guest
+            - name: RABBITMQ_DEFAULT_VHOST
+              value: /
+          ports:
+            - containerPort: 5672
+              hostPort: 5672
+              protocol: TCP
+            - containerPort: 15672
+              hostPort: 15672
+              protocol: TCP
+          command: ["rabbitmq-server"]
+      restartPolicy: Always

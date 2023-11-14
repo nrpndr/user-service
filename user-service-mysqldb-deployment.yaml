@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: user-service-mysqldb
+  name: user-service-mysqldb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: user-service-mysqldb
+  template:
+    metadata:
+      labels:
+        app: user-service-mysqldb
+    spec:
+      containers:
+        - name: user-service-mysqldb
+          image: mysql:8.0.35
+          ports:
+            - containerPort: 3306
+              protocol: TCP
+          env:
+            - name: MYSQL_DATABASE
+              value: db_user
+            - name: MYSQL_PASSWORD
+              value: "1234"
+            - name: MYSQL_ROOT_PASSWORD
+              value: root
+            - name: MYSQL_USER
+              value: nrpndr
+      restartPolicy: Always
