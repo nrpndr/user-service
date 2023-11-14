@@ -2,17 +2,17 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: user-service
-  name: user-service
+    app: user-service-server
+  name: user-service-server
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: user-service
+      app: user-service-server
   template:
     metadata:
       labels:
-        app: user-service
+        app: user-service-server
     spec:
       containers:
         - image: nrpndr/user-service:1.0
